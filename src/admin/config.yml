@@ -71,9 +71,8 @@ collections:
                 hint: "Paste your Shopify product page URL here. A 'Buy Garlic' button will appear automatically."
               - label: "Shopify Buy Button Embed Code"
                 name: shopify_buy_button
-                widget: code
+                widget: text
                 required: false
-                default_language: html
                 hint: "Optional: paste the full embed code from Shopify → Sales Channels → Buy Button. If filled, this replaces the simple link above."
 
           - label: "Stay / Airbnb Photos"
