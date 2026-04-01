@@ -1,31 +1,32 @@
 {
   "name": "Alpine Acres Adventures",
-  "tagline": "A family ranch — llamas, heirloom garlic, and the kind of life you build with your hands.",
-  "location": "Oregon Cascades",
-  "email": "hello@alpineacresadventures.com",
-  "instagram": "alpineacresadventures",
-
-  "hero": {
-    "title_a": "Alpine Acres",
-    "title_b": "Ranch",
-    "bg_image": ""
-  },
-
-  "stats": {
-    "acres": "20+",
-    "llamas": "12",
-    "garlic_lbs": "200+",
-    "years": "4",
-    "est_year": "2022"
-  },
-
   "about": {
     "image": "",
     "pull_quote": "What began as a dream to live closer to the land has grown into something we couldn't have imagined.",
     "body_1": "Welcome to Alpine Acres Adventures, nestled in the heart of the Oregon Cascades. We're a family ranch where mornings start before sunrise and evenings end with the kind of tired that only honest labor can earn.",
     "body_2": "Our homestead is home to a beloved llama herd, heirloom garlic fields, and a community of neighbors and customers who believe in knowing where their food comes from. Everything we grow and raise carries the same intention: real, clean, and cared for."
   },
-
+  "garlic": {
+    "image": "",
+    "intro_1": "High mountain soil, clean snowmelt water, and short intense growing seasons produce garlic with exceptional flavor depth. Our hardneck varieties develop complex taste profiles that chefs and home cooks keep returning for.",
+    "intro_2": "Everything is hand-harvested, properly cured, and packed on the farm. No warehouses, no middlemen.",
+    "shopify_product_url": "",
+    "shopify_buy_button": ""
+  },
+  "tagline": "A family ranch — llamas, heirloom garlic, and the kind of life you build with your hands.",
+  "instagram": "alpineacresadventures",
+  "location": "Tumalo, Oregon",
+  "stay": {
+    "cabin_photo": "",
+    "outdoors_photo": "",
+    "farmtable_photo": ""
+  },
+  "hero": {
+    "title_a": "Alpine Acres",
+    "title_b": "Ranch",
+    "bg_image": ""
+  },
+  "email": "hello@alpineacresadventures.com",
   "llamas": [
     {
       "name": "Luna",
@@ -43,18 +44,11 @@
       "photo": ""
     }
   ],
-
-  "garlic": {
-    "image": "",
-    "intro_1": "High mountain soil, clean snowmelt water, and short intense growing seasons produce garlic with exceptional flavor depth. Our hardneck varieties develop complex taste profiles that chefs and home cooks keep returning for.",
-    "intro_2": "Everything is hand-harvested, properly cured, and packed on the farm. No warehouses, no middlemen.",
-    "shopify_product_url": "",
-    "shopify_buy_button": ""
-  },
-
-  "stay": {
-    "cabin_photo": "",
-    "outdoors_photo": "",
-    "farmtable_photo": ""
+  "stats": {
+    "acres": "20+",
+    "llamas": "12",
+    "garlic_lbs": "200+",
+    "years": "4",
+    "est_year": "2022"
   }
 }
