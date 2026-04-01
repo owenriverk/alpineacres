@@ -1,0 +1,60 @@
+{
+  "name": "Alpine Acres Adventures",
+  "tagline": "A family ranch — llamas, heirloom garlic, and the kind of life you build with your hands.",
+  "location": "Oregon Cascades",
+  "email": "hello@alpineacresadventures.com",
+  "instagram": "alpineacresadventures",
+
+  "hero": {
+    "title_a": "Alpine Acres",
+    "title_b": "Ranch",
+    "bg_image": ""
+  },
+
+  "stats": {
+    "acres": "20+",
+    "llamas": "12",
+    "garlic_lbs": "200+",
+    "years": "4",
+    "est_year": "2022"
+  },
+
+  "about": {
+    "image": "",
+    "pull_quote": "What began as a dream to live closer to the land has grown into something we couldn't have imagined.",
+    "body_1": "Welcome to Alpine Acres Adventures, nestled in the heart of the Oregon Cascades. We're a family ranch where mornings start before sunrise and evenings end with the kind of tired that only honest labor can earn.",
+    "body_2": "Our homestead is home to a beloved llama herd, heirloom garlic fields, and a community of neighbors and customers who believe in knowing where their food comes from. Everything we grow and raise carries the same intention: real, clean, and cared for."
+  },
+
+  "llamas": [
+    {
+      "name": "Luna",
+      "description": "Our eldest. Gentle, patient, and the first to greet every visitor at the gate. She's been with us from the very beginning.",
+      "photo": ""
+    },
+    {
+      "name": "Capt. Fluff",
+      "description": "The herd's self-appointed foreman. Watchful, skeptical of strangers, and absolutely certain he is in charge at feeding time.",
+      "photo": ""
+    },
+    {
+      "name": "Meadow",
+      "description": "Born on the first warm day of spring. Full of energy and always the first one to investigate anything new on the property.",
+      "photo": ""
+    }
+  ],
+
+  "garlic": {
+    "image": "",
+    "intro_1": "High mountain soil, clean snowmelt water, and short intense growing seasons produce garlic with exceptional flavor depth. Our hardneck varieties develop complex taste profiles that chefs and home cooks keep returning for.",
+    "intro_2": "Everything is hand-harvested, properly cured, and packed on the farm. No warehouses, no middlemen.",
+    "shopify_product_url": "",
+    "shopify_buy_button": ""
+  },
+
+  "stay": {
+    "cabin_photo": "",
+    "outdoors_photo": "",
+    "farmtable_photo": ""
+  }
+}

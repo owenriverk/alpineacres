@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.name }}</title>
+  <meta name="description" content="{{ site.tagline }}">
+  <meta property="og:title"       content="{{ site.name }}">
+  <meta property="og:description" content="{{ site.tagline }}">
+  <meta property="og:type"        content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  {# Netlify Identity — required for Decap CMS login redirect #}
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#home" class="nav__logo">{{ site.hero.title_a }}</a>
+    <button class="nav__burger" id="nav-burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="#about">Ranch</a></li>
+      <li><a href="#llamas">Llamas</a></li>
+      <li><a href="#garlic">Garlic</a></li>
+      <li><a href="#stay">Stay</a></li>
+      <li><a href="#vendors">Wholesale</a></li>
+      <li>
+        <a href="https://www.instagram.com/{{ site.instagram }}"
+           target="_blank" rel="noopener noreferrer" class="nav__ig">
+          @{{ site.instagram }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+{# ═══════════════════════════════════════════════════════════ HERO #}
+<section class="hero" id="home">
+  <div class="hero__bg" {% if site.hero.bg_image %}style="background-image: linear-gradient(160deg, rgba(20,40,15,0.75) 0%, rgba(42,74,30,0.6) 50%, rgba(74,122,53,0.4) 100%), url('{{ site.hero.bg_image }}'); background-size: cover; background-position: center;"{% endif %}></div>
+  <div class="hero__content">
+    <p class="hero__location">
+      <span class="hero__location-dot" aria-hidden="true"></span>
+      {{ site.location }}
+    </p>
+    <h1 class="hero__title">
+      <span class="hero__title-a">{{ site.hero.title_a }}</span>
+      <em class="hero__title-b">{{ site.hero.title_b }}</em>
+    </h1>
+    <div class="hero__rule" aria-hidden="true"></div>
+    <p class="hero__tagline">{{ site.tagline }}</p>
+    <div class="hero__ctas">
+      <a href="#about" class="btn btn--rim">The Ranch</a>
+      <a href="#garlic" class="btn btn--gold">2025 Garlic &rarr;</a>
+    </div>
+  </div>
+  <button class="hero__down" id="hero-down" aria-label="Scroll down">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </button>
+</section>
+
+{# STATS #}
+<div class="stats">
+  <div class="stats__inner">
+    <div class="stat">
+      <span class="stat__n">{{ site.stats.acres }}</span>
+      <span class="stat__l">Acres</span>
+    </div>
+    <div class="stat__div" aria-hidden="true"></div>
+    <div class="stat">
+      <span class="stat__n">{{ site.stats.llamas }}</span>
+      <span class="stat__l">Llamas</span>
+    </div>
+    <div class="stat__div" aria-hidden="true"></div>
+    <div class="stat">
+      <span class="stat__n">{{ site.stats.garlic_lbs }}</span>
+      <span class="stat__l">lbs Garlic</span>
+    </div>
+    <div class="stat__div" aria-hidden="true"></div>
+    <div class="stat">
+      <span class="stat__n">{{ site.stats.years }}</span>
+      <span class="stat__l">Years Farming</span>
+    </div>
+  </div>
+</div>
+
+{# ═══════════════════════════════════════════════════════════ ABOUT #}
+<section class="section section--light" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num" aria-hidden="true">01</span>
+      <div class="sec-head__text">
+        <span class="sec-label">Our Story</span>
+        <h2>A Ranch Built on Family,<br>Land &amp; Hard Work</h2>
+      </div>
+    </div>
+
+    <div class="about-layout">
+      <div class="about-layout__image">
+        {% if site.about.image %}
+          <img src="{{ site.about.image }}" alt="The family at Alpine Acres" loading="lazy">
+        {% else %}
+          <div class="img-ph"><span>🏔</span><small>Add family photo in editor</small></div>
+        {% endif %}
+        <div class="about-layout__badge">
+          <strong>Est.</strong>
+          <span>{{ site.stats.est_year }}</span>
+        </div>
+      </div>
+
+      <div class="about-layout__body">
+        <blockquote class="about-pull">"{{ site.about.pull_quote }}"</blockquote>
+        <p>{{ site.about.body_1 }}</p>
+        <p>{{ site.about.body_2 }}</p>
+      </div>
+    </div>
+
+    <ul class="about-values">
+      <li><span class="about-values__mark" aria-hidden="true">—</span><h3>Regenerative</h3><p>We farm with the land, not against it.</p></li>
+      <li><span class="about-values__mark" aria-hidden="true">—</span><h3>Community First</h3><p>Local markets, neighbors, fair pricing.</p></li>
+      <li><span class="about-values__mark" aria-hidden="true">—</span><h3>Mountain Raised</h3><p>High altitude means exceptional flavor.</p></li>
+      <li><span class="about-values__mark" aria-hidden="true">—</span><h3>Family Operated</h3><p>Every product carries our name.</p></li>
+    </ul>
+  </div>
+</section>
+
+{# ══════════════════════════════════════════════════════════ LLAMAS #}
+<section class="section section--dark" id="llamas">
+  <div class="wrap">
+    <div class="sec-head sec-head--light">
+      <span class="sec-num sec-num--gold" aria-hidden="true">02</span>
+      <div class="sec-head__text">
+        <span class="sec-label sec-label--gold">Meet the Herd</span>
+        <h2>Our Llamas</h2>
+      </div>
+    </div>
+
+    <p class="llamas-intro">
+      Our llamas are the heart of Alpine Acres. Each one has a personality as big as the mountains they roam —
+      and they're the reason half our visitors keep coming back.
+    </p>
+
+    <div class="llamas-roll" role="list">
+      {% for llama in site.llamas %}
+      <article class="llama" role="listitem">
+        <div class="llama__photo">
+          {% if llama.photo %}
+            <img src="{{ llama.photo }}" alt="{{ llama.name }} the llama" loading="lazy">
+          {% else %}
+            <div class="img-ph img-ph--dark"><span>🦙</span></div>
+          {% endif %}
+        </div>
+        <div class="llama__body">
+          <h3 class="llama__name">{{ llama.name }}</h3>
+          <p>{{ llama.description }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="llamas-footer">
+      <p>Follow us for daily herd updates and open farm days.</p>
+      <a href="https://www.instagram.com/{{ site.instagram }}"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn--gold">See them on Instagram &rarr;</a>
+    </div>
+  </div>
+</section>
+
+{# ══════════════════════════════════════════════════════════ GARLIC #}
+<section class="section section--light section--garlic" id="garlic">
+  <div class="wrap">
+    <div class="garlic-head">
+      <span class="sec-num" aria-hidden="true">03</span>
+      <span class="garlic-year" aria-hidden="true">2025</span>
+      <div class="garlic-head__text">
+        <span class="sec-label">Harvest Season</span>
+        <h2>Heirloom Garlic,<br>Grown at Altitude</h2>
+      </div>
+    </div>
+
+    <div class="garlic-layout">
+      <div class="garlic-layout__body">
+        <p>{{ site.garlic.intro_1 }}</p>
+        <p>{{ site.garlic.intro_2 }}</p>
+
+        <dl class="garlic-specs">
+          <div class="garlic-spec"><dt>Varieties</dt><dd>Rocambole, Purple Stripe, Porcelain</dd></div>
+          <div class="garlic-spec"><dt>Grown Without</dt><dd>Synthetic pesticides or fertilizers — ever</dd></div>
+          <div class="garlic-spec"><dt>Available As</dt><dd>Culinary, seed stock, braids, wholesale lots</dd></div>
+          <div class="garlic-spec"><dt>Minimum Order</dt><dd>5 lbs culinary · 10 lbs seed</dd></div>
+        </dl>
+
+        {# ── Shopify integration — auto-switches based on what's configured ── #}
+        <div class="garlic-actions">
+          {% if site.garlic.shopify_buy_button %}
+            {# Buy Button embed from Shopify dashboard #}
+            {{ site.garlic.shopify_buy_button | safe }}
+          {% elif site.garlic.shopify_product_url %}
+            {# Simple link to Shopify product page #}
+            <a href="{{ site.garlic.shopify_product_url }}"
+               target="_blank" rel="noopener noreferrer"
+               class="btn btn--gold">Buy Garlic &rarr;</a>
+            <a href="#vendors" class="btn btn--rim-dark">Wholesale Inquiry</a>
+          {% else %}
+            {# Fallback until Shopify is set up #}
+            <a href="#vendors" class="btn btn--dark">Wholesale Inquiry</a>
+            <a href="mailto:{{ site.email }}?subject=Garlic%20Order" class="btn btn--rim-dark">Contact Us</a>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="garlic-layout__image">
+        <div class="garlic-image">
+          {% if site.garlic.image %}
+            <img src="{{ site.garlic.image }}" alt="Freshly harvested garlic" loading="lazy">
+          {% else %}
+            <div class="img-ph"><span>🧄</span><small>Add harvest photo in editor</small></div>
+          {% endif %}
+          <div class="garlic-image__tag">Season Open</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ════════════════════════════════════════════════════════════ STAY #}
+<section class="section section--dark section--stay" id="stay">
+  <div class="wrap">
+    <div class="sec-head sec-head--light sec-head--split">
+      <div>
+        <span class="sec-num sec-num--gold" aria-hidden="true">04</span>
+        <span class="sec-label sec-label--gold">Coming Soon</span>
+        <h2>Stay at the Ranch</h2>
+      </div>
+      <p class="sec-head__aside">
+        We're preparing the property for guests. Get on the early list and we'll reach out when reservations open.
+      </p>
+    </div>
+
+    <div class="stay-grid">
+      <div class="stay-card stay-card--main">
+        <div class="stay-card__image">
+          {% if site.stay.cabin_photo %}
+            <img src="{{ site.stay.cabin_photo }}" alt="The mountain cabin" loading="lazy">
+          {% else %}
+            <div class="img-ph img-ph--dark"><span>🏡</span><small>Add cabin photo in editor</small></div>
+          {% endif %}
+        </div>
+        <div class="stay-card__body">
+          <span class="stay-card__tag">Featured</span>
+          <h3>The Mountain Cabin</h3>
+          <p>Sweeping valley views, wood-burning stove, private llama pasture access. Sleeps 4.</p>
+        </div>
+      </div>
+      <div class="stay-aside">
+        <div class="stay-card stay-card--sm">
+          <div class="stay-card__image">
+            {% if site.stay.outdoors_photo %}
+              <img src="{{ site.stay.outdoors_photo }}" alt="The ranch outdoors" loading="lazy">
+            {% else %}
+              <div class="img-ph img-ph--dark"><span>🌄</span></div>
+            {% endif %}
+          </div>
+          <div class="stay-card__body">
+            <h3>The Ranch</h3>
+            <p>Garlic fields, llama walks, miles of mountain trail from the property.</p>
+          </div>
+        </div>
+        <div class="stay-card stay-card--sm">
+          <div class="stay-card__image">
+            {% if site.stay.farmtable_photo %}
+              <img src="{{ site.stay.farmtable_photo }}" alt="Farm to table breakfast" loading="lazy">
+            {% else %}
+              <div class="img-ph img-ph--dark"><span>🍳</span></div>
+            {% endif %}
+          </div>
+          <div class="stay-card__body">
+            <h3>Farm to Table</h3>
+            <p>Fresh eggs and seasonal produce harvested steps from your door.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stay-notify">
+      <p><strong>Accepting early interest.</strong> Be among the first to book when we open.</p>
+      <a href="mailto:{{ site.email }}?subject=Farm%20Stay%20Early%20Interest" class="btn btn--gold">
+        Get on the list &rarr;
+      </a>
+    </div>
+  </div>
+</section>
+
+{# ═══════════════════════════════════════════════════════ WHOLESALE #}
+<section class="section section--light" id="vendors">
+  <div class="wrap">
+    <div class="vendors-layout">
+      <div class="vendors-layout__left">
+        <div class="sec-head">
+          <span class="sec-num" aria-hidden="true">05</span>
+          <div class="sec-head__text">
+            <span class="sec-label">Wholesale &amp; Bulk</span>
+            <h2>Partner With Alpine Acres</h2>
+          </div>
+        </div>
+        <p>Restaurants, co-ops, farm stands, retailers — we work with vendors who care about where their product comes from. Direct farm relationship, flexible volumes, transparent sourcing.</p>
+        <ul class="vendor-reasons">
+          <li><span aria-hidden="true">—</span> Consistent quality, same practices season after season</li>
+          <li><span aria-hidden="true">—</span> Transparent sourcing — we'll tell you exactly how and when it was grown</li>
+          <li><span aria-hidden="true">—</span> 5 lb minimums up to full-season contracts</li>
+          <li><span aria-hidden="true">—</span> Seed garlic available — certified-clean, high-germination stock</li>
+          <li><span aria-hidden="true">—</span> Direct relationship with the growers, no middlemen</li>
+        </ul>
+      </div>
+
+      <div class="vendors-layout__right">
+        <form class="vendor-form" name="vendor-inquiry" method="POST" data-netlify="true" id="vendor-form" novalidate>
+          <input type="hidden" name="form-name" value="vendor-inquiry">
+          <h3>Send an Inquiry</h3>
+          <div class="field">
+            <label for="f-name">Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="f-name" name="name" required autocomplete="name" placeholder="Your name">
+          </div>
+          <div class="field">
+            <label for="f-business">Business</label>
+            <input type="text" id="f-business" name="business" autocomplete="organization" placeholder="Restaurant, co-op, farm stand…">
+          </div>
+          <div class="field">
+            <label for="f-email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="f-email" name="email" required autocomplete="email" placeholder="you@example.com">
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-product">Product</label>
+              <select id="f-product" name="product">
+                <option value="">Select…</option>
+                <option>Culinary Garlic (bulk)</option>
+                <option>Seed Garlic</option>
+                <option>Garlic Braids</option>
+                <option>Mixed Order</option>
+                <option>Not Sure Yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-volume">Volume</label>
+              <select id="f-volume" name="volume">
+                <option value="">Estimate…</option>
+                <option>5–20 lbs</option>
+                <option>20–50 lbs</option>
+                <option>50–100 lbs</option>
+                <option>100+ lbs</option>
+                <option>Full Season Contract</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-message">Notes</label>
+            <textarea id="f-message" name="message" placeholder="Timing, questions, anything helpful…"></textarea>
+          </div>
+          <button type="submit" class="btn btn--dark btn--full" id="vendor-submit">Send Inquiry</button>
+          <div id="vendor-feedback" role="alert" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ══════════════════════════════════════════════════════ INSTAGRAM #}
+<div class="ig-strip" id="instagram">
+  <div class="ig-strip__inner">
+    <div class="ig-strip__text">
+      <span class="sec-label sec-label--gold">Follow Along</span>
+      <p class="ig-strip__handle">@{{ site.instagram }}</p>
+    </div>
+    <div class="ig-grid">
+      {% for i in range(0, 6) %}
+      <a href="https://www.instagram.com/{{ site.instagram }}" target="_blank" rel="noopener noreferrer" class="ig-tile" aria-label="Instagram">
+        <div class="img-ph img-ph--dark"><span>📷</span></div>
+        <div class="ig-tile__over" aria-hidden="true">↗</div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+</main>
+
+{# FOOTER #}
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <p class="footer__name">{{ site.name }}</p>
+      <p class="footer__loc">{{ site.location }}</p>
+      <div class="footer__links">
+        <a href="https://www.instagram.com/{{ site.instagram }}" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="mailto:{{ site.email }}">Email</a>
+      </div>
+    </div>
+    <nav class="footer__nav" aria-label="Footer">
+      <div class="footer__col">
+        <h4>Ranch</h4>
+        <ul>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#llamas">The Llamas</a></li>
+          <li><a href="#garlic">Garlic</a></li>
+          <li><a href="#stay">Farm Stay</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Buying</h4>
+        <ul>
+          <li><a href="#garlic">Culinary Garlic</a></li>
+          <li><a href="#garlic">Seed Garlic</a></li>
+          <li><a href="#vendors">Wholesale</a></li>
+          <li><a href="mailto:{{ site.email }}">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="footer__bottom">
+    <span>&copy; 2025 {{ site.name }}</span>
+    <span>Made on the ranch</span>
+  </div>
+</footer>
+
+{# Netlify Identity redirect for CMS login #}
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function(user) {
+      if (!user) {
+        window.netlifyIdentity.on("login", function() {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

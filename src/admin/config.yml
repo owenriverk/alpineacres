@@ -1,0 +1,85 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
+
+# All site content lives in one JSON file, edited via this friendly UI
+collections:
+  - name: "content"
+    label: "Site Content"
+    files:
+
+      - name: "main"
+        label: "🏔 Site Settings"
+        file: "src/_data/site.json"
+        format: json
+        fields:
+          - { label: "Site Name",        name: name,     widget: string }
+          - { label: "Tagline",          name: tagline,  widget: string }
+          - { label: "Location",         name: location, widget: string, hint: "Shown in hero and footer e.g. Oregon Cascades" }
+          - { label: "Contact Email",    name: email,    widget: string }
+          - { label: "Instagram Handle", name: instagram, widget: string, hint: "Without the @ symbol" }
+
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Title — Line 1",    name: title_a,   widget: string }
+              - { label: "Title — Line 2 (italic bold)", name: title_b, widget: string }
+              - { label: "Background Photo",  name: bg_image,  widget: image, required: false, hint: "Large landscape photo. Recommended: 1920×1080 or larger." }
+
+          - label: "Stats Bar"
+            name: stats
+            widget: object
+            fields:
+              - { label: "Acres",        name: acres,      widget: string, hint: 'e.g. "40+" or "20"' }
+              - { label: "Llamas",       name: llamas,     widget: string }
+              - { label: "Garlic (lbs)", name: garlic_lbs, widget: string, hint: 'e.g. "200+"' }
+              - { label: "Years Farming",name: years,      widget: string }
+              - { label: "Est. Year",    name: est_year,   widget: string }
+
+          - label: "About the Ranch"
+            name: about
+            widget: object
+            fields:
+              - { label: "Family Photo",  name: image,       widget: image, required: false }
+              - { label: "Pull Quote",    name: pull_quote,  widget: string, hint: "The big italic quote — keep it short and heartfelt" }
+              - { label: "Paragraph 1",  name: body_1,      widget: text }
+              - { label: "Paragraph 2",  name: body_2,      widget: text }
+
+          - label: "Llamas"
+            name: llamas
+            widget: list
+            fields:
+              - { label: "Name",        name: name,        widget: string }
+              - { label: "Description", name: description, widget: text }
+              - { label: "Photo",       name: photo,       widget: image, required: false }
+
+          - label: "Garlic"
+            name: garlic
+            widget: object
+            fields:
+              - { label: "Garlic Photo",         name: image,               widget: image, required: false }
+              - { label: "Intro Paragraph 1",    name: intro_1,             widget: text }
+              - { label: "Intro Paragraph 2",    name: intro_2,             widget: text }
+              - label: "Shopify Product URL"
+                name: shopify_product_url
+                widget: string
+                required: false
+                hint: "Paste your Shopify product page URL here. A 'Buy Garlic' button will appear automatically."
+              - label: "Shopify Buy Button Embed Code"
+                name: shopify_buy_button
+                widget: code
+                required: false
+                default_language: html
+                hint: "Optional: paste the full embed code from Shopify → Sales Channels → Buy Button. If filled, this replaces the simple link above."
+
+          - label: "Stay / Airbnb Photos"
+            name: stay
+            widget: object
+            fields:
+              - { label: "Cabin Photo",       name: cabin_photo,     widget: image, required: false }
+              - { label: "Outdoors Photo",    name: outdoors_photo,  widget: image, required: false }
+              - { label: "Farm Table Photo",  name: farmtable_photo, widget: image, required: false }

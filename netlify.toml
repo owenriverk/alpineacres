@@ -1,0 +1,12 @@
+[build]
+  command   = "npm run build"
+  publish   = "_site"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Redirect /admin to the CMS (Decap handles its own routing)
+[[redirects]]
+  from   = "/admin"
+  to     = "/admin/index.html"
+  status = 200
