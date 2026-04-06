@@ -3,8 +3,8 @@
   "about": {
     "image": "",
     "pull_quote": "What began as a dream to live closer to the land has grown into something we couldn't have imagined.",
-    "body_1": "Welcome to Alpine Acres Adventures, nestled in the heart of the Oregon Cascades. We're a family ranch where mornings start before sunrise and evenings end with the kind of tired that only honest labor can earn.",
-    "body_2": "Our homestead is home to a beloved llama herd, heirloom garlic fields, and a community of neighbors and customers who believe in knowing where their food comes from. Everything we grow and raise carries the same intention: real, clean, and cared for."
+    "body_1": "Welcome to Alpine Acres Ranch, nestled in the heart of the High Desert. We're a family ranch where mornings start before sunrise and evenings end with the kind of tired that only honest labor can earn.",
+    "body_2": "Our homestead is home to a beloved llama herd, organic garlic fields, and a community of customers who believe in knowing where their food comes from. Everything we grow and raise carries the same intention: real, clean, and cared for."
   },
   "garlic": {
     "image": "",
@@ -13,7 +13,7 @@
     "shopify_product_url": "",
     "shopify_buy_button": ""
   },
-  "tagline": "A family ranch — llamas, heirloom garlic, and the kind of life you build with your hands.",
+  "tagline": "A family ranch — pack llamas, organically grown seed garlic, and the kind of life you build with your hands.",
   "instagram": "alpineacresadventures",
   "location": "Tumalo, Oregon",
   "stay": {
@@ -26,10 +26,10 @@
     "title_b": "Ranch",
     "bg_image": ""
   },
-  "email": "hello@alpineacresadventures.com",
+  "email": "alpineacresranch@gmail.com",
   "llamas": [
     {
-      "name": "Luna",
+      "name": "Bear Mountain Scout",
       "description": "Our eldest. Gentle, patient, and the first to greet every visitor at the gate. She's been with us from the very beginning.",
       "photo": ""
     },
@@ -45,9 +45,9 @@
     }
   ],
   "stats": {
-    "acres": "20+",
-    "llamas": "12",
-    "garlic_lbs": "200+",
+    "acres": "30",
+    "llamas": "19+ and adding more each Spring",
+    "garlic_lbs": "2 acres ",
     "years": "4",
     "est_year": "2022"
   }
