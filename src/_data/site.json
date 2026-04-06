@@ -1,5 +1,5 @@
 {
-  "name": "Alpine Acres Adventures",
+  "name": "Alpine Acres Ranch",
   "about": {
     "image": "",
     "pull_quote": "What began as a dream to live closer to the land has grown into something we couldn't have imagined.",
@@ -24,7 +24,7 @@
   "hero": {
     "title_a": "Alpine Acres",
     "title_b": "Ranch",
-    "bg_image": ""
+    "bg_image": "/assets/images/img_6593-2.jpg"
   },
   "email": "alpineacresranch@gmail.com",
   "llamas": [
