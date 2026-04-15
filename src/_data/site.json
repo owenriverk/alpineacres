@@ -19,7 +19,7 @@
   "stay": {
     "cabin_photo": "",
     "outdoors_photo": "",
-    "farmtable_photo": ""
+    "farmtable_photo": "/assets/images/img_1881.jpg"
   },
   "hero": {
     "title_a": "Alpine Acres",
@@ -35,8 +35,8 @@
     },
     {
       "name": "Chance",
-      "description": "Our gentle soul who is steady on the trail and a perfect for kiddos to ride. ",
-      "photo": ""
+      "description": "A gentle soul who is steady on the trail and a perfect for kiddos to ride. ",
+      "photo": "/assets/images/img_7227.jpg"
     }
   ],
   "stats": {
