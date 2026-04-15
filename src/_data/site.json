@@ -3,17 +3,17 @@
   "about": {
     "image": "/assets/images/famphoto.jpg",
     "pull_quote": "What began as a dream to live closer to the land has grown into something we couldn't have imagined.",
-    "body_1": "Welcome to Alpine Acres Ranch, nestled in the heart of the High Desert. We're a family ranch where mornings start before sunrise and evenings end with the kind of tired that only honest labor can earn.",
+    "body_1": "Welcome to Alpine Acres Ranch, nestled in the heart of the High Desert. ",
     "body_2": "The Ranch is home to a beloved llama herd, organic garlic fields, and a community of customers who believe in knowing where their food comes from. Everything we grow and raise carries the same intention: real, clean, and cared for."
   },
   "garlic": {
     "image": "/assets/images/garlicflowers.jpg",
-    "intro_1": "High mountain soil, clean snowmelt water, and short intense growing seasons produce garlic with exceptional flavor depth. Our hardneck varieties develop complex taste profiles that chefs and home cooks keep returning for.",
-    "intro_2": "Everything is hand-harvested, properly cured, and packed on the farm. No warehouses, no middlemen.",
+    "intro_1": "High mountain soil, clean snowmelt water, and short intense growing seasons produce garlic with exceptional flavor depth. Offering a variety of hardneck seed quality garlic- Organic Music, Chesnok Red Seed, Russian Red , & Lorz Italian.",
+    "intro_2": "Everything is hand-planted and harvested, properly cured, and packaged on the farm. No warehouses, no middlemen.",
     "shopify_product_url": "",
     "shopify_buy_button": ""
   },
-  "tagline": "A family ranch — pack llamas, organically grown seed garlic, and the kind of life you build with your hands.",
+  "tagline": "A family ranch — organically grown seed garlic & pack llamas.",
   "instagram": "alpineacresadventures",
   "location": "Tumalo, Oregon",
   "stay": {
@@ -30,12 +30,12 @@
   "llamas": [
     {
       "name": "Bear Mountain Scout",
-      "description": "Our eldest. Gentle, patient, and the first to greet every visitor at the gate. She's been with us from the very beginning.",
-      "photo": ""
+      "description": "Our strong and feisty lead llama who can tackle any trail.  ",
+      "photo": "/assets/images/img_9591.jpg"
     },
     {
       "name": "Chance",
-      "description": "The herd's self-appointed foreman. Watchful, skeptical of strangers, and absolutely certain he is in charge at feeding time.",
+      "description": "Our gentle soul who is steady on the trail and a perfect for kiddos to ride. ",
       "photo": ""
     }
   ],
