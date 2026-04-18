@@ -3,7 +3,7 @@
   "about": {
     "image": "/assets/images/famphoto.jpg",
     "pull_quote": "Welcome to Alpine Acres Ranch, nestled in the heart of the High Desert. ",
-    "body_1": "A family tradition of farming the land since our great, great grandparents homesteaded in the High Desert of Central Oregon- we are a small farm working to regenerate this little slice of paradise and provide high quality seed garlic to the community. ",
+    "body_1": "A family tradition of farming the land since our great, great grandparents homesteaded in the High Desert of Central Oregon in the late 1800s- We are a small farm working to regenerate this little slice of paradise and provide high quality seed garlic to the community. ",
     "body_2": "The Ranch is home to a beloved llama herd, organic garlic fields, and a community of customers who believe in knowing where their food comes from. Everything we grow and raise carries the same intention: real, clean, and cared for."
   },
   "garlic": {
@@ -17,7 +17,7 @@
   "instagram": "alpineacresadventures",
   "location": "Tumalo, Oregon",
   "stay": {
-    "cabin_photo": "",
+    "cabin_photo": "/assets/images/chatgpt-image-apr-18-2026-11_00_13-am.png",
     "outdoors_photo": "",
     "farmtable_photo": ""
   },
